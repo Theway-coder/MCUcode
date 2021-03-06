@@ -69,54 +69,61 @@ void delay(unsigned int x)
 
 void display(unsigned int x) 
 {
+    unsigned int i;
     if (x == 1) //1000
     {       
-        wei1 = 1;
-        wei2 = 0;
-        wei3 = 0;
-        wei4 = 0;
-        P0 = 0x06; //显示1
-        delay(2);
-        wei1 = 0;
-        wei2 = 1;
-        wei3 = 0;
-        wei4 = 0;
-        P0 = 0x3f; //显示0
-        wei1 = 0;
-        wei2 = 0;
-        wei3 = 1;
-        wei4 = 0;
-        P0 = 0x3f; //显示0
-        wei1 = 0;   
-        wei2 = 0;
-        wei3 = 0;
-        wei4 = 1;
-        P0 = 0x3f; //显示0
+       for (i = 11200; i > 0; i--)
+       {
+            wei1 = 1;
+            wei2 = 0;
+            wei3 = 0;
+            wei4 = 0;
+            P0 = 0x06; //显示1
+            delay(2);
+            wei1 = 0;
+            wei2 = 1;
+            wei3 = 0;
+            wei4 = 0;
+            P0 = 0x3f; //显示0
+            wei1 = 0;
+            wei2 = 0;
+            wei3 = 1;
+            wei4 = 0;
+            P0 = 0x3f; //显示0
+            wei1 = 0;   
+            wei2 = 0;
+            wei3 = 0;
+            wei4 = 1;
+            P0 = 0x3f; //显示0
+       }
         
     }
     if (x == 2) //0100
     {       
-        wei1 = 1;
-        wei2 = 0;
-        wei3 = 0;
-        wei4 = 0;
-        P0 = 0x3f; //显示0
-        delay(2);
-        wei1 = 0;
-        wei2 = 1;
-        wei3 = 0;
-        wei4 = 0;
-        P0 = 0x06; //显示1
-        wei1 = 0;
-        wei2 = 0;
-        wei3 = 1;
-        wei4 = 0;
-        P0 = 0x3f; //显示0
-        wei1 = 0;
-        wei2 = 0;
-        wei3 = 0;
-        wei4 = 1;
-        P0 = 0x3f; //显示0
+        for (i = 11200; i > 0; i--)
+        {
+            wei1 = 1;
+            wei2 = 0;
+            wei3 = 0;
+            wei4 = 0;
+            P0 = 0x3f; //显示0
+            delay(2);
+            wei1 = 0;
+            wei2 = 1;
+            wei3 = 0;
+            wei4 = 0;
+            P0 = 0x06; //显示1
+            wei1 = 0;
+            wei2 = 0;
+            wei3 = 1;
+            wei4 = 0;
+            P0 = 0x3f; //显示0
+            wei1 = 0;
+            wei2 = 0;
+            wei3 = 0;
+            wei4 = 1;
+            P0 = 0x3f; //显示0
+        }
         
     }
     if (x == 3) //0010
